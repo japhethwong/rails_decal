@@ -1,0 +1,46 @@
+<h1>Homework 3 Output</h1>
+<h2>Users</h2>
+<table>
+  <tr>
+    <td><b>Username</b></td>
+    <td><b>Email</b></td>
+    <td><b>Age</b></td>
+  </tr>
+
+  <% @users.each do |entry| %>
+  <tr>
+    <td><%= entry.username %></td>
+    <td><%= entry.email %></td>
+    <td><%= entry.age.to_s %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<h2>Cats</h2>
+<table>
+  <tr>
+    <td><b>Name</b></td>
+  </tr>
+
+  <% @cats.each do |entry| %>
+  <tr>
+    <td><%= entry.name %></td>
+  </tr>
+  <% end %>
+</table>
+
+<h2>Todos</h2>
+<table>
+  <tr>
+    <td><b>Tasks</b></td>
+    <td><b>Finished?</b></td>
+  </tr>
+
+  <% @todos.each do |entry| %>
+  <tr>
+    <td><%= entry.tasks %></td>
+    <td><%= entry.finished.to_s %></td>
+  </tr>
+  <% end %>
+</table>
