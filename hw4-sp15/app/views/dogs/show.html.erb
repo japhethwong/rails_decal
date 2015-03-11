@@ -1,0 +1,18 @@
+<h1>Dog Detail View</h1>
+<p>Displaying detailed view for requested Dog.</p>
+<table>
+  <tr>
+    <td><b>ID: </b></td>
+    <td><%= @dog.id.to_s %></td>
+  </tr>
+  <tr>
+    <td><b>Name: </b></td>
+    <td><%= @dog.name %></td>
+  </tr>
+  <tr>
+    <td><b>Age: </b></td>
+    <td><%= @dog.age.to_s %></td>
+  </tr>
+</table>
+
+<p>To return to index, click <%= link_to "here", dogs_path %>.</p>
