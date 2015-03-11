@@ -1,0 +1,18 @@
+<h1>Dogs Index</h1>
+<h2>Dogs in the Database</h2>
+<table>
+  <tr>
+    <td style="width: 250px"><b>Name</b></td>
+    <td style="width: 100px"><b>Age</b></td>
+  </tr>
+  <% @dogs.each do |d| %>
+    <tr>
+      <td><%= link_to d.name, dog_path(d) %></td>
+      <td><%= d.age.to_s %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+<h2>Add a Dog</h2>
+<%= link_to "Click here to add a dog!", dogs_new_path %>
