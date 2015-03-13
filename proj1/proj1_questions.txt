@@ -16,7 +16,7 @@ The specified line is sets the button's action.  When the button is pressed, a r
  
 Question 3: What would you name your own Pokemon?
 
-
+To highlight my lack of creativity... how about something like 'NinjaBuster'?  It'll be stealthy but also have a variety of attacks in its arsenal of weapons.
  
 Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
