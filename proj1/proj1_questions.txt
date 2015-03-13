@@ -4,9 +4,11 @@ Japheth Wong | Ruby on Rails Decal
  
 Question 0: Why is this error being thrown?
 
+This error is being thrown because we have not created a Pokemon model yet.
 
 Question 1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear?
 
+In HomeController's index method, we query for all Pokemon which do not have a trainer assigned to them (aka a 'wild Pokemon').  We then randomly sample from these Pokemon as @pokemon, which is then displayed in the associated view.  The common attribute between these Pokemon is that they do not have a trainer assigned to them.
  
 Question 2a: What does the following line in the help text do? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
 
