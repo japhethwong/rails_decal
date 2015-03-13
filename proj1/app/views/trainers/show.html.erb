@@ -1,3 +1,25 @@
 <h3>Trainer</h3>
+
+<h4>Profile Information</h4>
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
+
+<h4>Captured Pokemon</h4>
+<table>
+  <tr>
+    <td style="width: 100px"><b>ID</b></td>
+    <td style="width: 250px"><b>Name</b></td>
+    <td style="width: 100px"><b>Level</b></td>
+  </tr>
+
+<% @trainer.pokemons.each do |p| %>
+  <tr>
+    <td><%= p.id.to_s %></td>
+    <td><%= p.name %></td>
+    <td><%= p.level.to_s %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<p><%= link_to "< Return home", root_path %></p>
