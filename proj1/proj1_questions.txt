@@ -12,6 +12,7 @@ In HomeController's index method, we query for all Pokemon which do not have a t
  
 Question 2a: What does the following line in the help text do? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
 
+The specified line is sets the button's action.  When the button is pressed, a request will be made to the URI pattern which matches the prefix "capture", and binds the Pokemon instance in the view to id as part of the request.  In our controller, this gives us access to the appropriate Pokemon ID in our params hashmap.
  
 Question 3: What would you name your own Pokemon?
 
