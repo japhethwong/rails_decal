@@ -10,6 +10,7 @@
     <td style="width: 100px"><b>ID</b></td>
     <td style="width: 250px"><b>Name</b></td>
     <td style="width: 100px"><b>Level</b></td>
+    <td style="width: 100px"><b>Health</b></td>
   </tr>
 
 <% @trainer.pokemons.each do |p| %>
@@ -17,6 +18,7 @@
     <td><%= p.id.to_s %></td>
     <td><%= p.name %></td>
     <td><%= p.level.to_s %></td>
+    <td><%= p.health.to_s %></td>
   </tr>
 <% end %>
 
