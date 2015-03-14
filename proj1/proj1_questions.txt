@@ -20,6 +20,7 @@ To highlight my lack of creativity... how about something like 'NinjaBuster'?  I
  
 Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
+I passed in the instance of trainer that is associated with the Pokemon.  Rails has black magic that will match it up with the route for trainer, and automatically bind the ID of the @trainer instance into the params.
  
 Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
