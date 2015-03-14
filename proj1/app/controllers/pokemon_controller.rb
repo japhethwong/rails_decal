@@ -29,8 +29,10 @@ class PokemonController < ApplicationController
     @pokemon.trainer = current_trainer
 
     if @pokemon.save
+      flash[:error] = nil # Hack: Otherwise the error message doesn't seem to disappear even on valid input.
       redirect_to @pokemon.trainer
     else
+      flash[:error] = @pokemon.errors.full_messages.to_sentence
       render "new"
     end
   end
