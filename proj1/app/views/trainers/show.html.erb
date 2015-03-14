@@ -16,16 +16,24 @@
     <td style="width: 100px"><b>Level</b></td>
     <td style="width: 100px"><b>Health</b></td>
     <td></td>
+    <% if @trainer == current_trainer %>
+    <td></td>
+    <% end %>
   </tr>
 
 <% @trainer.pokemons.each do |p| %>
+  <% if @trainer == current_trainer or p.health > 0 %>
   <tr>
     <td><%= p.id.to_s %></td>
     <td><%= p.name %></td>
     <td><%= p.level.to_s %></td>
-    <td><%= p.health.to_s %></td>
+    <td><% if p.health <= 0 %><span style="color: red"><% end %><%= p.health.to_s %><% if p.health <= 0 %></span><% end %></td>
     <td><%= button_to "Damage!", damage_path(id: p), :class => "button small", :method => :patch %></td>
+    <% if @trainer == current_trainer %>
+    <td><%= button_to "Heal!", heal_path(id: p), :class => "button small", :method => :patch %></td>
+     <% end %>
   </tr>
+  <% end %>
 <% end %>
 
 </table>
