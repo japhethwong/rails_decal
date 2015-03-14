@@ -34,7 +34,7 @@ Good project.  There seems to be a slight bug in the skeleton code whereby the t
 
  
 Link to your GitHub repo.
-
+https://github.com/japhethwong/rails_decal
  
 Extra credit: Link your Heroku deployed app
- 
+https://pokeportal.herokuapp.com/ 
