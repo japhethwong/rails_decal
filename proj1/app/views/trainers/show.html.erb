@@ -4,6 +4,10 @@
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 
+<% if @trainer == current_trainer %>
+<%= button_to "Create Pokemon!", new_pokemon_path, :class => "button medium", :method => :get %>
+<% end %>
+
 <h4>Captured Pokemon</h4>
 <table>
   <tr>

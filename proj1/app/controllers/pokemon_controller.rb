@@ -17,4 +17,27 @@ class PokemonController < ApplicationController
     end
     redirect_to @trainer
   end
+
+  def new
+    @pokemon = Pokemon.new
+  end
+
+  def create
+    @pokemon = Pokemon.create(pokemon_params)
+    @pokemon.level = 1
+    @pokemon.health = 100
+    @pokemon.trainer = current_trainer
+
+    if @pokemon.save
+      redirect_to @pokemon.trainer
+    else
+      render "new"
+    end
+  end
+
+  private
+
+  def pokemon_params
+    params.require(:pokemon).permit(:name)
+  end
 end
