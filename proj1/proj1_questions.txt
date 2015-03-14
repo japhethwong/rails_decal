@@ -1,6 +1,6 @@
 PROJECT 1 QUESTIONS
 ===================
-Japheth Wong | Ruby on Rails Decal
+Japheth Wong | Ruby on Rails Decal (Spring 2015)
  
 Question 0: Why is this error being thrown?
 
