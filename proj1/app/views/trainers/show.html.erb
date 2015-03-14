@@ -11,6 +11,7 @@
     <td style="width: 250px"><b>Name</b></td>
     <td style="width: 100px"><b>Level</b></td>
     <td style="width: 100px"><b>Health</b></td>
+    <td></td>
   </tr>
 
 <% @trainer.pokemons.each do |p| %>
@@ -19,6 +20,7 @@
     <td><%= p.name %></td>
     <td><%= p.level.to_s %></td>
     <td><%= p.health.to_s %></td>
+    <td><%= button_to "Damage!", damage_path(id: p), :class => "button small", :method => :patch %></td>
   </tr>
 <% end %>
 
